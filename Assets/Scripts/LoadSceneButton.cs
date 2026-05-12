@@ -2,7 +2,7 @@ using Unity.VectorGraphics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Button : MonoBehaviour
+public class LoadSceneButton : MonoBehaviour
 {
     public void StartContinueSceneButton()
     {
@@ -11,7 +11,7 @@ public class Button : MonoBehaviour
 
     public void StartNewGameSceneButton()
     {
-        CoinCount.coins = 10;
+        GenerateAndCountCoins.coins = 10;
         SceneManager.LoadScene("GameScene");
     }
 

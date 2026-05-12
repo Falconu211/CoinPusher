@@ -884,7 +884,7 @@ GameObject:
   - component: {fileID: 749872339}
   - component: {fileID: 749872340}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: MoveBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -996,6 +996,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 201b755acb08ef042949bc97e087027a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveBox
+  speed: 1
 --- !u!65 &749872340
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1247,7 +1248,7 @@ MonoBehaviour:
   coinText: {fileID: 1744903014}
   coinPrefab: {fileID: 4762173038979118238, guid: 5ba7ee2029a417e4986d07cdff48e454, type: 3}
   gameOverText: {fileID: 2103171865}
-  pulsCoin: 1
+  increaseCoin: 1
 --- !u!1 &1337087871
 GameObject:
   m_ObjectHideFlags: 0

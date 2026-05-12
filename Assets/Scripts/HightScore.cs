@@ -7,13 +7,13 @@ public class HightScore : MonoBehaviour
     [SerializeField] TextMeshProUGUI secondScoreText;
     [SerializeField] TextMeshProUGUI thirdScoreText;
 
-    public static int firstScore;
-    public static int secondScore;
-    public static int thirdScore;
+    private static int firstScore;
+    private static int secondScore;
+    private static int thirdScore;
 
     private void Start()
     {
-        CountScore(CoinCount.coins);
+        CountScore(GenerateAndCountCoins.coins);
     }
 
     public void CountScore(int score)

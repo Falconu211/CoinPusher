@@ -1,13 +1,13 @@
 using TMPro;
 using UnityEngine;
 
-public class TitleCoins : MonoBehaviour
+public class ReflectsTheTotalNumberOfCoins : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI coinsCountText;
 
     void Start()
     {
         string coins = "Coins:";
-        coinsCountText.text = coins + CoinCount.coins;
+        coinsCountText.text = coins + GenerateAndCountCoins.coins;
     }
 }

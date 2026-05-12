@@ -8,18 +8,23 @@ public class StartCoinPosition : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        int generatedCoinsXCoordinateUpperLimitNumber = 9;
+        int generatedCoinsXCoordinateLowerLimitNumber = -2;
+        int generatedCoinsYCoordinateUpperLimitNumber = 9;
+        int generatedCoinsYCoordinateLowerLimitNumber = 3;
+        int generatedCoinsZCoordinateUpperLimitNumber = 4;
+        int generatedCoinsZCoordinateLowerLimitNumber = -4;
+
 
         for (int i = 0; i < startCoinNumber; i++)
         {
-            float randomPositonX = Random.Range(-2, 9);
-            float PositonY = 2;
-            float randomPositonZ = Random.Range(-4, 4);
+            float randomPositonX = Random.Range(generatedCoinsXCoordinateLowerLimitNumber, generatedCoinsXCoordinateUpperLimitNumber);
+            float randomPositonY = Random.Range(generatedCoinsYCoordinateLowerLimitNumber, generatedCoinsYCoordinateUpperLimitNumber);
+            float randomPositonZ = Random.Range(generatedCoinsZCoordinateLowerLimitNumber, generatedCoinsZCoordinateUpperLimitNumber);
 
-            Vector3 position = new Vector3(randomPositonX, PositonY, randomPositonZ);
+            Vector3 position = new Vector3(randomPositonX, randomPositonY, randomPositonZ);
 
-            coinPrefab.transform.rotation = Quaternion.LookRotation(position);
-
-            Instantiate(coinPrefab, position, coinPrefab.transform.rotation);
+            Instantiate(coinPrefab, position, Quaternion.LookRotation(position));
         }
     }
 }
